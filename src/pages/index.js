@@ -6,6 +6,7 @@ const IndexPage = () => {
   return (
     <main>
       <title>Home Page</title>
+
       <HeroSection />
     </main>
   );
