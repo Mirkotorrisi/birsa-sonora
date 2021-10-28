@@ -1,15 +1,23 @@
+.ondine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
 .hero-section {
-  background-color: #eeeeee;
+  position: relative;
+  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 200;
   &__violin {
     position: absolute;
-    right: 0;
-    z-index: 10;
+    right: -30%;
+    transform: rotate(30deg);
+    max-width: 70vw;
+    z-index: 100001;
     pointer-events: none;
   }
   &__main {
@@ -19,6 +27,7 @@
     align-items: flex-start;
   }
   &__title {
+    display: flex;
     font-family: "Nunito", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-weight: 200;
 
@@ -26,41 +35,58 @@
       font-weight: 800;
     }
     font-size: 6rem;
-    color: #303031;
+    color: var(--black);
   }
   &__subtitle {
-    color: #3f3f3f;
+    color: var(--black);
     font-size: 3rem;
     font-weight: 300;
   }
   &__ctas {
     display: flex;
-
-    justify-content: space-between;
-    button {
+    a {
+      padding: 1rem 2rem;
+      border: 2px solid var(--black);
+      border-radius: 4px;
       font-weight: 700;
       font-size: 1.5rem;
-      padding: 1rem 2rem;
-      border: 2px solid #303031;
-      border-radius: 4px;
-    }
-    :nth-child(1) {
-      background: linear-gradient(0deg, #fbfcfc 50%, #205d63 50%);
-      background-size: 200% 200%;
-      background-position: 0 0%;
+      &.contact_cta {
+        background: linear-gradient(
+          0deg,
+          var(--white) 50%,
+          var(--primary_blue) 50%
+        );
+        background-size: 200% 200%;
+        background-position: 0 0%;
 
-      color: #ffffff;
-      transition: all 0.2s linear;
-      &:hover {
-        background-position: 0% 100%;
-        color: #205d63;
-        box-shadow: 1px 1px 10px #4ddff0;
+        color: var(--white);
+        text-shadow: 1px 1px 1px var(--black);
+        transition: all 0.2s linear;
+        &:hover {
+          background-position: 0% 100%;
+          color: var(--primary_blue);
+          box-shadow: 1px 1px 10px var(--primary_blue);
+          text-shadow: none;
+        }
       }
     }
+    justify-content: space-between;
   }
   &__list {
+    background: var(--white);
     &__item {
+      z-index: 10;
+      // background: var(--white);
+      color: #8c8c8c;
+      font-weight: 300;
+      font-family: "Varela Round";
+      font-size: 1.5rem;
       display: flex;
+      &--selected {
+        border-bottom: 5px solid var(--primary_blue);
+        transform: translateY(-10px);
+        list-style-type: none;
+      }
     }
     &__icon {
       width: 50px;
@@ -70,27 +96,7 @@
     list-style-type: none;
     font-size: 2rem;
     font-weight: 700;
-    background: rgb(48, 48, 49);
-    background: -moz-linear-gradient(
-      90deg,
-      rgba(48, 48, 49, 1) 50%,
-      rgba(48, 184, 198, 1) 95%,
-      rgba(48, 48, 49, 1) 100%
-    );
-    background: -webkit-linear-gradient(
-      90deg,
-      rgba(48, 48, 49, 1) 50%,
-      rgba(48, 184, 198, 1) 95%,
-      rgba(48, 48, 49, 1) 100%
-    );
-    background: linear-gradient(
-      90deg,
-      rgba(48, 48, 49, 1) 50%,
-      rgba(48, 184, 198, 1) 95%,
-      rgba(48, 48, 49, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#303031",endColorstr="#303031",GradientType=1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }
+
+//3094c6

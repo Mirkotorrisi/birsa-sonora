@@ -1,0 +1,70 @@
+.teachers-section {
+  // * {
+  //   z-index: 10;
+  // }
+  background-color: var(--white);
+  li {
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+  &__picture {
+    perspective: 1000px;
+    position: absolute;
+    top: 0;
+    transform-style: preserve-3d;
+    left: 0;
+    &__face {
+      top: 0;
+      left: 0;
+      max-width: 300px;
+      pointer-events: none;
+    }
+    &__instrument {
+      transform-style: preserve-3d;
+
+      top: 0;
+      left: 0;
+      max-width: 500px;
+      pointer-events: none;
+    }
+  }
+  &__desc {
+    border-radius: 8px;
+    background-color: #eeeeeed1;
+    backdrop-filter: blur(10px);
+    -webkit-box-shadow: 1px 1px 5px 1px var(--black), -1px 2px 5px 1px #30b7c662;
+    box-shadow: 1px 1px 5px 1px var(--black), -1px 2px 5px 1px #30b7c662;
+    max-width: 50%;
+    min-width: 320px;
+  }
+  &__name {
+    font-family: Nunito;
+    font-size: 2rem;
+    background: -webkit-linear-gradient(var(--primary_blue), var(--black));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__bio {
+    white-space: pre-line;
+  }
+}
+@media (max-width: 576px) {
+  .teacher-carousel {
+    transform: translateY(-100px);
+  }
+  .teachers-section {
+    height: 1000px;
+    &__desc {
+      transform: translateY(-250px);
+    }
+    &__picture__face {
+      transform: translateX(50px);
+    }
+    &__bio {
+      font-size: 2rem;
+    }
+  }
+}

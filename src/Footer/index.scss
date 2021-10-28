@@ -1,0 +1,20 @@
+.footer {
+  background-color: #2d2d2d;
+  color: var(--white);
+  &__section {
+    &__logo {
+      max-width: 300px;
+    }
+    &__social {
+      &:hover {
+        filter: drop-shadow(2px 2px 10px var(--primary_blue));
+      }
+    }
+  }
+  A {
+    color: var(--primary_blue);
+    &:hover {
+      color: var(--white);
+    }
+  }
+}
