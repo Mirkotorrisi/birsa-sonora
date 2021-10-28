@@ -26,6 +26,7 @@ export default function MiddleSection() {
       <section
         className="middle-section px-10 pt-20 lg:px-60 xl:px-96"
         ref={ref}
+        id="about"
       >
         <h1 className="title mb-20">La scuola </h1>
         {pictures.map((pic, i) => (

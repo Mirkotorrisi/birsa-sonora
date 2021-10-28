@@ -2,13 +2,14 @@ import "./index.scss";
 import React, { useState } from "react";
 import { teachers } from "../resources.js";
 
-export default function TeachersCarousel({ index, setIndex }) {
+export default function TeachersCarousel({ index, setIndex, interval }) {
   const [isTouch, setisTouch] = useState(false);
   const [startPress, setstartPress] = useState(0);
   const tz = Math.round(500 / 2 / Math.tan(Math.PI / teachers.length));
   const basicAngle = 360 / teachers.length;
 
   const handleStartAction = (e) => {
+    clearInterval(interval);
     setstartPress({ x: e.clientX, y: e.clientY });
   };
 

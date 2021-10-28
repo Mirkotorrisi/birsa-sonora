@@ -6,11 +6,18 @@ import { teachers } from "./resources.js";
 import { instruments } from "../HeroSection/res";
 import TeachersCarousel from "./TeachersCarousel";
 
+let interval;
 export default function MiddleSection() {
   const [index, setIndex] = useState(0);
 
   const ref = useRef(null);
   const q = gsap.utils.selector(ref);
+
+  useEffect(() => {
+    interval = setInterval(() => {
+      setIndex((prev) => (prev < instruments.length - 1 ? prev + 1 : 0));
+    }, 5000);
+  }, []);
 
   useEffect(() => {
     gsap
@@ -37,7 +44,10 @@ export default function MiddleSection() {
               index % instruments.length === instrInd ? "--selected" : ""
             }`}
             key={alt + title}
-            onClick={() => setIndex(instrInd)}
+            onClick={() => {
+              setIndex(instrInd);
+              clearInterval(interval);
+            }}
           >
             <img
               src={imgSrc}
@@ -52,7 +62,11 @@ export default function MiddleSection() {
         {teachers[Math.abs(index) % teachers.length]?.name}
       </h2>
       <div className="flex flex-col md:flex-row space-between mt-20 lg:mt-0">
-        <TeachersCarousel index={index} setIndex={setIndex} />
+        <TeachersCarousel
+          index={index}
+          setIndex={setIndex}
+          interval={interval}
+        />
         <div className="flex space-between">
           <div className="w-1/2 h-1/2"></div>
           <div className="teachers-section__desc p-10">

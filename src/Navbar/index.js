@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 
 const Navbar = () => {
-  const [menuShow, setMenu] = React.useState(window.innerWidth > 600);
+  const [menuShow, setMenu] = React.useState(false);
   const showMenu = () => setMenu(!menuShow);
 
   return (
@@ -30,30 +30,27 @@ const Navbar = () => {
       <div
         className={`w-full block flex-grow lg:flex lg:items-right lg:w-auto ${
           menuShow ? "" : "h-0"
-        }`}
+        } lg:h-full`}
       >
-        {(menuShow || window.innerWidth > 600) && (
-          <div className="flex flex-col lg:flex-row flexitems-center mt-5 lg:mt-0 justify-between lg:flex-grow w-full">
-            <a
-              href="#about"
-              className="block mt-4 lg:inline-block lg:mt-0 mr-4"
-            >
-              La scuola
-            </a>
-            <a href="#contact" className="block mt-4 lg:inline-block lg:mt-0">
-              Contatti
-            </a>
-            <a href="#findus" className="block mt-4 lg:inline-block lg:mt-0">
-              Dove trovarci
-            </a>
-            <a
-              href="#video"
-              className="block mt-4 lg:inline-block lg:mt-0 mr-4"
-            >
-              Video didattici
-            </a>
-          </div>
-        )}
+        <div
+          className={` ${
+            !menuShow ? "hidden" : ""
+          } lg:flex flex-col lg:flex-row flexitems-center mt-5 lg:mt-0 justify-between lg:flex-grow w-full`}
+        >
+          {" "}
+          <a href="#about" className="block mt-4 lg:inline-block lg:mt-0 mr-4">
+            La scuola
+          </a>
+          <a href="#contact" className="block mt-4 lg:inline-block lg:mt-0">
+            Contatti
+          </a>
+          <a href="#findus" className="block mt-4 lg:inline-block lg:mt-0">
+            Dove trovarci
+          </a>
+          <a href="#video" className="block mt-4 lg:inline-block lg:mt-0 mr-4">
+            Video didattici
+          </a>
+        </div>
       </div>
     </nav>
   );

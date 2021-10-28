@@ -19,7 +19,7 @@ export default function FindusSection() {
   }, []);
 
   return (
-    <section className="find-us" ref={ref}>
+    <section className="find-us" id="findus" ref={ref}>
       <div className="lg:pt-20 mb-5 px-10 lg:px-60 xl:px-96">
         <h1 className="title">Dove ci troviamo</h1>
         <address className="pt-5 pl-2 mb-10">

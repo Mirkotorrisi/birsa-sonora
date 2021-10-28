@@ -31,6 +31,7 @@ export default function ContactSection() {
     <section
       className="contact-section py-20 px-10 lg:px-60 xl:px-96"
       ref={ref}
+      id="contact"
     >
       <h1 className="title">Contattaci</h1>
       <div className="contact-section__form mt-20">
