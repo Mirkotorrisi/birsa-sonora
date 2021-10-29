@@ -21,7 +21,6 @@ export default function ContactSection() {
         },
       })
       .from(q(".title"), { xPercent: -50, opacity: 0 }, 0)
-      .from(q(".contact-section__form__title"), { xPercent: 50, opacity: 0 }, 0)
       .from(q("textarea"), { xPercent: -50, opacity: 0 }, 0)
       .from(q("button"), { xPercent: 50, opacity: 0 }, 0)
       .from(q("h3"), { xPercent: -50, opacity: 0 }, 0);
