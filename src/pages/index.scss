@@ -15,6 +15,12 @@ main {
   font-weight: 700;
 }
 
+@media (max-width: 576px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+
 @media (min-width: 576px) {
   html {
     font-size: 10px;

@@ -23,7 +23,7 @@ const Footer = () => (
         </a>
       ))}
     </div>
-    <div className="footer__section mt-10 md:mt-0">
+    <div className="footer__section mt-20 md:mt-0">
       Developed by
       <a href="https://www.linkedin.com/in/mirko-torrisi/"> Mirko Torrisi</a>
     </div>

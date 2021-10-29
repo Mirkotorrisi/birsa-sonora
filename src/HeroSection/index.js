@@ -68,7 +68,7 @@ export default function HeroSection() {
             </li>
           ))}
         </ul>
-        <div className="hero-section__ctas">
+        <div className="hero-section__ctas mt-20 lg:mt-0">
           <button className="hero-section__ctas__contact">
             <a href="#contact" className="contact_cta">
               Contattaci

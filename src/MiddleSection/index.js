@@ -32,7 +32,7 @@ export default function MiddleSection() {
         {pictures.map((pic, i) => (
           <div
             className={`middle-section__picture items-center ${
-              i !== pictures.length - 1 ? "pb-20" : ""
+              i !== pictures.length - 1 ? "pb-36" : ""
             } flex-col xl:flex-row${i % 2 === 0 ? "-reverse" : ""}`}
             key={pic.alt + i + "o"}
           >

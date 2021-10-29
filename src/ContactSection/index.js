@@ -29,16 +29,16 @@ export default function ContactSection() {
 
   return (
     <section
-      className="contact-section py-20 px-10 lg:px-60 xl:px-96"
+      className="contact-section py-36 lg:py-20 px-10 lg:px-60 xl:px-96"
       ref={ref}
       id="contact"
     >
       <h1 className="title">Contattaci</h1>
       <div className="contact-section__form mt-20">
-        <h2 className="contact-section__form__title">
+        <h3 className="contact-section__form__title">
           Scrivici su WhatsApp per avere maggiori informazioni, ti risponderemo
           il prima possibile!
-        </h2>
+        </h3>
         <form className="flex flex-col items-start mt-5">
           <div className="contact-section__form__input__container">
             <textarea
@@ -63,7 +63,7 @@ export default function ContactSection() {
             </a>
           </button>
         </form>
-        <h3 className="mt-10">
+        <h3 className="mt-20">
           In alternativa, puoi chiamare uno di questi numeri:
           <a href={`tel:${PHONE_NUMBER}`} className="phone_number">
             +39 {PHONE_NUMBER}
