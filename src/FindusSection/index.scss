@@ -12,4 +12,15 @@
   .address {
     font-size: 2rem;
   }
+  .notes_cont {
+    width: 100vw;
+    height: 200px;
+  }
+  .notes_cover {
+    position: absolute;
+    width: 100vw;
+    height: 200px;
+    background-color: var(--black);
+    z-index: 10;
+  }
 }

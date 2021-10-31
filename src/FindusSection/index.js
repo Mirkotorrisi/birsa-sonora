@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import "./index.scss";
-
+import NoteRighe from "../../public/static/svg/note_with_righe.svg";
 export default function FindusSection() {
   const ref = useRef(null);
   const q = gsap.utils.selector(ref);
@@ -16,10 +16,27 @@ export default function FindusSection() {
       })
       .from(q(".title"), { xPercent: -50, opacity: 0 }, 0)
       .from(q("address"), { xPercent: 50, opacity: 0 }, 0);
+    // gsap
+    //   .timeline({
+    //     defaults: { duration: 1 },
+    //     scrollTrigger: {
+    //       trigger: "#notes",
+    //       scrub: true,
+    //       start: "bottom top",
+    //       end: "top bottom",
+    //     },
+    //   })
+    //   .to(q(".notes_cover"), { x: 700 });
   }, []);
 
   return (
-    <section className="find-us pt-36" id="findus" ref={ref}>
+    <section className="find-us" id="findus" ref={ref}>
+      <div className="notes_cont">
+        <div className="notes_cover"></div>
+        <NoteRighe
+          style={{ transform: "translateX(-30px)", width: "100%", height: 100 }}
+        />
+      </div>
       <div className="lg:pt-20 mb-5 px-10 lg:px-60 xl:px-96">
         <h1 className="title">Dove ci troviamo</h1>
         <address className="pt-20 lg:pt-5 pl-2 ">
