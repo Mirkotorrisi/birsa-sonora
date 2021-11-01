@@ -3,6 +3,10 @@
   color: var(--white);
   font-weight: 700;
   z-index: 1000;
+
+  &__logo {
+    max-width: 10vw;
+  }
 }
 
 $animation: 0.6s; // animation speed

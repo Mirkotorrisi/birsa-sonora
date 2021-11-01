@@ -1,13 +1,17 @@
 import React from "react";
 import "./index.scss";
+import logoBrisa from "../images/logo_brisa.png";
 
 const Navbar = () => {
   const [menuShow, setMenu] = React.useState(false);
   const showMenu = () => setMenu(!menuShow);
 
   return (
-    <nav className="navbar flex fixed items-center justify-end flex-wrap w-screen px-10 lg:px-60 xl:px-96 py-8">
-      <div className="flex align-center lg:hidden">
+    <nav className="navbar flex fixed items-center justify-between flex-wrap w-screen px-10 lg:px-60 xl:px-96 py-8">
+      <a href="#hero-section">
+        <img src={logoBrisa} className="lg:hidden navbar__logo" />
+      </a>
+      <div className="flex align-center justify-between lg:hidden">
         <button className="mr-10 w-0" onClick={showMenu}>
           <div
             id="hamburger"

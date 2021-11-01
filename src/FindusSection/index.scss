@@ -7,20 +7,23 @@
   height: 100%;
   transform: scale(3);
 }
-
+.notes_cont {
+  overflow: hidden;
+  position: relative;
+}
+.notes_cover {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--white);
+  z-index: 10;
+}
 @media (max-width: 576px) {
-  .address {
+  address {
     font-size: 2rem;
   }
   .notes_cont {
     width: 100vw;
-    height: 200px;
-  }
-  .notes_cover {
-    position: absolute;
-    width: 100vw;
-    height: 200px;
-    background-color: var(--black);
-    z-index: 10;
+    transform: translateY(20%);
   }
 }

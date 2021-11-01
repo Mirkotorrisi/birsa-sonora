@@ -16,17 +16,17 @@ export default function FindusSection() {
       })
       .from(q(".title"), { xPercent: -50, opacity: 0 }, 0)
       .from(q("address"), { xPercent: 50, opacity: 0 }, 0);
-    // gsap
-    //   .timeline({
-    //     defaults: { duration: 1 },
-    //     scrollTrigger: {
-    //       trigger: "#notes",
-    //       scrub: true,
-    //       start: "bottom top",
-    //       end: "top bottom",
-    //     },
-    //   })
-    //   .to(q(".notes_cover"), { x: 700 });
+    gsap
+      .timeline({
+        defaults: { duration: 1 },
+        scrollTrigger: {
+          trigger: ".notes_cover",
+          start: "top center",
+          end: "bottom top",
+          scrub: true,
+        },
+      })
+      .to(q(".notes_cover"), { x: "100%" });
   }, []);
 
   return (
@@ -34,7 +34,11 @@ export default function FindusSection() {
       <div className="notes_cont">
         <div className="notes_cover"></div>
         <NoteRighe
-          style={{ transform: "translateX(-30px)", width: "100%", height: 100 }}
+          style={{
+            transform: "translateX(-30px)",
+            width: "100vw",
+            height: 264,
+          }}
         />
       </div>
       <div className="lg:pt-20 mb-5 px-10 lg:px-60 xl:px-96">
