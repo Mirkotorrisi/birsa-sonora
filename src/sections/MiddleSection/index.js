@@ -1,12 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import "./index.scss";
-
+import { useNav } from "../../hooks/useNav";
 import { gsap } from "gsap";
 import { pictures } from "./res.js";
-import WaveSvg from "../../public/static/svg/vaweSvg.svg";
+import WaveSvg from "../../../public/static/svg/vaweSvg.svg";
 
 export default function MiddleSection() {
-  const ref = useRef(null);
+  const ref = useNav("#about");
   const q = gsap.utils.selector(ref);
 
   useEffect(() => {

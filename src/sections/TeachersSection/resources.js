@@ -1,9 +1,9 @@
-import anninaPng from "../images/anninaPng.png";
-import lauraPng from "../images/lauraPng.png";
-import pianoPng from "../images/pianoPng.png";
-import violinPng from "../images/violin.png";
-import saxPng from "../images/saxPng.png";
-import guitarPng from "../images/guitarPng.png";
+import anninaPng from "../../images/anninaPng.png";
+import lauraPng from "../../images/lauraPng.png";
+import pianoPng from "../../images/pianoPng.png";
+import violinPng from "../../images/violin.png";
+import saxPng from "../../images/saxPng.png";
+import guitarPng from "../../images/guitarPng.png";
 
 export const teachers = [
   {

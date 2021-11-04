@@ -1,13 +1,14 @@
 import React from "react";
 import "./index.scss";
-import logoBrisa from "../images/logo_brisa.png";
+import NavLink from "./NavLink";
+import logoBrisa from "../../images/logo_brisa.png";
 
 const Navbar = () => {
   const [menuShow, setMenu] = React.useState(false);
   const showMenu = () => setMenu(!menuShow);
 
   return (
-    <nav className="navbar flex fixed items-center justify-between flex-wrap w-screen px-10 lg:px-60 xl:px-96 py-8">
+    <nav className="navbar flex fixed items-center justify-between flex-wrap w-screen py-4 lg:py-0 px-10 lg:px-60 xl:px-96 ">
       <a href="#hero-section">
         <img src={logoBrisa} className="lg:hidden navbar__logo" />
       </a>
@@ -41,19 +42,10 @@ const Navbar = () => {
             !menuShow ? "hidden" : ""
           } lg:flex flex-col lg:flex-row flexitems-center mt-5 lg:mt-0 justify-between lg:flex-grow w-full`}
         >
-          {" "}
-          <a href="#about" className="block mt-4 lg:inline-block lg:mt-0 mr-4">
-            La scuola
-          </a>
-          <a href="#contact" className="block mt-4 lg:inline-block lg:mt-0">
-            Contatti
-          </a>
-          <a href="#findus" className="block mt-4 lg:inline-block lg:mt-0">
-            Dove trovarci
-          </a>
-          <a href="#video" className="block mt-4 lg:inline-block lg:mt-0 mr-4">
-            Video didattici
-          </a>
+          <NavLink link="#about">La scuola</NavLink>
+          <NavLink link="#contact">Contatti</NavLink>
+          <NavLink link="#findus">Dove Trovarci</NavLink>
+          <NavLink link="#video">Video Didattici</NavLink>
         </div>
       </div>
     </nav>

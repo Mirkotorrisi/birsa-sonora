@@ -8,7 +8,23 @@
     max-width: 10vw;
   }
 }
+.nav__item {
+  background: linear-gradient(0deg, var(--white) 50%, var(--black) 50%);
+  background-size: 200% 200%;
+  background-position: 0 0%;
 
+  color: var(--white);
+  text-shadow: 1px 1px 1px var(--black);
+  transition: all 0.1s ease-in;
+  &:hover {
+    background-position: 0% 100%;
+    color: var(--primary_blue);
+    text-shadow: none;
+  }
+  &.activeClass {
+    color: var(--primary_blue);
+  }
+}
 $animation: 0.6s; // animation speed
 $scale: 0.5; // icon scale 68/68 default
 

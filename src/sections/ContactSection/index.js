@@ -1,10 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
+import { useNav } from "../../hooks/useNav";
 import "./index.scss";
 import { PHONE_NUMBER, LAURA_NUMBER, EMAIL } from "./resources.js";
 
 export default function ContactSection() {
-  const ref = useRef();
+  const ref = useNav("#contact");
   const [interacted, setInteracted] = useState(false);
   const [input, setInput] = useState("");
 

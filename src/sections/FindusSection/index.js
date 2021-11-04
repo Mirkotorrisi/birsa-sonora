@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { useNav } from "../../hooks/useNav";
 import "./index.scss";
-import NoteRighe from "../../public/static/svg/note_with_righe.svg";
+import NoteRighe from "../../../public/static/svg/note_with_righe.svg";
 export default function FindusSection() {
-  const ref = useRef(null);
+  const ref = useNav("#findus");
   const q = gsap.utils.selector(ref);
 
   useEffect(() => {

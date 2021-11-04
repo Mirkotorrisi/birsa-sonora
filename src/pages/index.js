@@ -1,24 +1,27 @@
 import * as React from "react";
-import HeroSection from "../HeroSection";
-import MiddleSection from "../MiddleSection";
-import TeachersSection from "../TeachersSection";
-import FindusSection from "../FindusSection";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import HeroSection from "../sections/HeroSection";
+import MiddleSection from "../sections/MiddleSection";
+import TeachersSection from "../sections/TeachersSection";
+import FindusSection from "../sections/FindusSection";
+import Navbar from "../commons/Navbar";
+import Footer from "../commons/Footer";
+import { NavProvider } from "../context/NavContext";
 import "./index.scss";
-import ContactSection from "../ContactSection";
+import ContactSection from "../sections/ContactSection";
 
 const IndexPage = () => {
   return (
     <main>
       <title>Home Page</title>
-      <Navbar />
-      <HeroSection />
-      <MiddleSection />
-      <TeachersSection />
-      <FindusSection />
-      <ContactSection />
-      <Footer />
+      <NavProvider>
+        <Navbar />
+        <HeroSection />
+        <MiddleSection />
+        <TeachersSection />
+        <FindusSection />
+        <ContactSection />
+        <Footer />
+      </NavProvider>
     </main>
   );
 };

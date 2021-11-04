@@ -1,6 +1,6 @@
 import React from "react";
 import { socials } from "./resources";
-import logocompleto from "../images/logocompleto.png";
+import logocompleto from "../../images/logocompleto.png";
 import "./index.scss";
 
 const Footer = () => (

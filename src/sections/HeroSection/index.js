@@ -1,16 +1,17 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./index.scss";
 
-import Logo from "../../public/static/svg/logo_brisa.svg";
-import Ondine from "../../public/static/svg/ondineMod_anim.svg";
-import violinBg from "../images/violin.png";
-import { instruments, quotes } from "./res";
-import video from "../images/video.mp4";
+import Logo from "../../../public/static/svg/logo_brisa.svg";
+import Ondine from "../../../public/static/svg/ondineMod_anim.svg";
+import violinBg from "../../images/violin.png";
+import { useNav } from "../../hooks/useNav";
+import { quotes } from "./res";
+// import video from "../images/video.mp4";
 import { gsap } from "gsap";
 
 let interval;
 export default function HeroSection() {
-  const ref = useRef(null);
+  const ref = useNav("#home");
   const q = gsap.utils.selector(ref);
   let tl = gsap.timeline({
     delay: 1,
@@ -74,16 +75,18 @@ export default function HeroSection() {
           src={video}
           style={{ position: "fixed", top: 0, left: 1200, zIndex: 1 }}
         /> */}
-        <h1 className="hero-section__title">
-          <div className="hidden md:block">
+        <div className="hero-section__title mt-20">
+          <div className="hidden md:inline logo">
             <Logo style={{ width: 150, maxWidth: "15vw", marginRight: 10 }} />
           </div>
-          <div>
-            Brisa
-            <span>Sonora</span>
-            <p className="logo_sub">Corsi di musica</p>
+          <div className="hero-section__title__logotipo">
+            <h1>
+              Brisa
+              <span>Sonora</span>
+            </h1>
+            <p className="hero-section__title__sublogo">Corsi di musica</p>
           </div>
-        </h1>
+        </div>
         <div>
           <p
             className={
@@ -102,14 +105,11 @@ export default function HeroSection() {
             <span className="text">{quotes[index].author}</span>
           </p>
         </div>
-        <div className="hero-section__ctas mt-36 lg:mt-20 lg:mt-0">
-          <button className="hero-section__ctas__contact">
+        <div className="hero-section__ctas ">
+          <button className="hero-section__ctas__contact my-36 lg:mt-0">
             <a href="#contact" className="contact_cta">
               Contattaci
             </a>
-          </button>
-          <button className="hero-section__ctas__find-us ml-20">
-            <a href="#findus">Vieni a trovarci</a>
           </button>
         </div>
       </div>
