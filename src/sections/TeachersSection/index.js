@@ -37,7 +37,7 @@ export default function MiddleSection() {
       ref={ref}
     >
       <h1 className="title mb-10 lg:mt-20">I docenti</h1>
-      <div className="teachers-section__instruments flex space-around">
+      <div className="teachers-section__instruments mt-20 flex space-around">
         {instruments.map(({ imgSrc, title, alt }, instrInd) => (
           <li
             className={`hero-section__list__item${

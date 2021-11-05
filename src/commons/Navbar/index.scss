@@ -9,13 +9,18 @@
   }
 }
 .nav__item {
-  background: linear-gradient(0deg, var(--white) 50%, var(--black) 50%);
+  background: linear-gradient(0deg, #ffffff00 50%, var(--black) 50%);
   background-size: 200% 200%;
   background-position: 0 0%;
 
   color: var(--white);
   text-shadow: 1px 1px 1px var(--black);
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
+  &__block {
+    background: url(../../images/nav_decorator.png);
+    background-size: 20px 100%;
+    background-repeat: no-repeat;
+  }
   &:hover {
     background-position: 0% 100%;
     color: var(--primary_blue);
@@ -153,6 +158,9 @@ $scale: 0.5; // icon scale 68/68 default
 @media (max-width: 675px) {
   .navbar {
     font-size: 2rem;
+  }
+  .nav__item__block {
+    background: none;
   }
 }
 @keyframes bun-top-out {

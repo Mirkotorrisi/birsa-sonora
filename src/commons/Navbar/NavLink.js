@@ -8,16 +8,18 @@ const NavLink = ({ link, children }) => {
   };
 
   return (
-    <a
-      href={link}
-      className={`block nav__item p-6 lg:inline-block ${
-        activeNavLinkId === link ? "activeClass" : ""
-      }`}
-      onClick={handleClick}
-      id={link}
-    >
-      {children}
-    </a>
+    <div className="nav__item__block">
+      <a
+        href={link}
+        className={`block nav__item p-0 py-6 lg:p-6 lg:inline-block ${
+          activeNavLinkId === link ? "activeClass" : ""
+        }`}
+        onClick={handleClick}
+        id={link}
+      >
+        {children}
+      </a>
+    </div>
   );
 };
 
