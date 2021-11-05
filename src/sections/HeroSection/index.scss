@@ -13,7 +13,6 @@
   background-color: var(--white);
   span {
     display: inline-block;
-    transform: translateY(100%);
   }
 }
 .hero-section {
@@ -26,7 +25,6 @@
   background-size: cover;
   &__violin {
     position: absolute;
-    right: -30%;
     top: -30%;
     transform: rotate(30deg);
     max-width: 70vw;

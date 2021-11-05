@@ -41,17 +41,19 @@ export default function HeroSection() {
     }, 5000);
     gsap.to(q(".ond-even"), { x: 300, opacity: 0, duration: 1, delay: 0.5 });
     gsap.to(q(".ond-odd"), { x: -300, opacity: 0, duration: 1, delay: 0.5 });
-    gsap.from(q(".hero-section__list__icon"), {
-      opacity: 0,
-      x: -1000,
-      stagger: 0.2,
-      delay: 1,
-    });
 
-    tl.from(q(".hero-section__title"), { opacity: 0, duration: 0.5 }).from(
-      q(".hero-section__list__instr"),
-      { opacity: 0, duration: 0.2 }
-    );
+    tl.from(q(".hero-section__title"), { opacity: 0, duration: 0.5 });
+    gsap
+      .timeline({
+        defaults: { duration: 1 },
+        scrollTrigger: {
+          trigger: "#violin",
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      })
+      .fromTo(q("#violin"), { right: "30%" }, { right: "-50%" });
     return () => clearInterval(interval);
   }, []);
 
@@ -68,8 +70,9 @@ export default function HeroSection() {
         <img
           src={violinBg}
           alt="violin"
+          id="violin"
           aria-hidden="true"
-          className="hero-section__violin"
+          className="hero-section__violin hidden lg:block"
         />
         {/* <video
           src={video}
