@@ -58,6 +58,7 @@ export default function FindusSection() {
         }}
       >
         <iframe
+          title="maps"
           src="https://www.google.com/maps/d/u/0/embed?mid=18inuwOcaxrVr2UiiT0nQYhG3k1Ww9w8s"
           width="100%"
           height="380"

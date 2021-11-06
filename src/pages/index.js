@@ -12,7 +12,7 @@ import ContactSection from "../sections/ContactSection";
 const IndexPage = () => {
   return (
     <main>
-      <title>Home Page</title>
+      <title>Brisa Sonora</title>
       <NavProvider>
         <Navbar />
         <HeroSection />

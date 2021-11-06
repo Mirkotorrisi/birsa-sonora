@@ -10,10 +10,14 @@ const Navbar = () => {
   return (
     <nav className="navbar flex fixed items-center justify-between flex-wrap w-screen py-4 lg:py-0 px-10 lg:px-60 xl:px-96 ">
       <a href="#hero-section">
-        <img src={logoBrisa} className="lg:hidden navbar__logo" />
+        <img
+          src={logoBrisa}
+          alt="logo-brisa"
+          className="lg:hidden navbar__logo"
+        />
       </a>
       <div className="flex align-center justify-between lg:hidden">
-        <button className="mr-10 w-0" onClick={showMenu}>
+        <button aria-label="menu" className="mr-10 w-0" onClick={showMenu}>
           <div
             id="hamburger"
             className={"hamburglar " + (menuShow ? "is-open" : "is-closed")}
