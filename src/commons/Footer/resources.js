@@ -1,7 +1,7 @@
-import facebook from "../../images/facebook.png";
-import instagram from "../../images/instagram.png";
-import youtube from "../../images/youtube.png";
-import maps from "../../images/maps.png";
+import facebook from "../../images/facebook.webp";
+import instagram from "../../images/instagram.webp";
+import youtube from "../../images/youtube.webp";
+import maps from "../../images/maps.webp";
 
 export const socials = [
   {

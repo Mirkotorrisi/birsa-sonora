@@ -1,7 +1,7 @@
-import violinIcon from "../../images/violinIcon.png";
-import saxIcon from "../../images/saxIcon.png";
-import pianoIcon from "../../images/pianoIcon.png";
-import guitarIcon from "../../images/guitarIcon.png";
+import violinIcon from "../../images/violinIcon.webp";
+import saxIcon from "../../images/saxIcon.webp";
+import pianoIcon from "../../images/pianoIcon.webp";
+import guitarIcon from "../../images/guitarIcon.webp";
 
 export const instruments = [
   {

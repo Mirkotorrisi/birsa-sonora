@@ -3,7 +3,7 @@ import "./index.scss";
 
 import Logo from "../../../public/static/svg/logo_brisa.svg";
 import Ondine from "../../../public/static/svg/ondineMod_anim.svg";
-import violinBg from "../../images/violin.png";
+import violinBg from "../../images/violin.webp";
 import { useNav } from "../../hooks/useNav";
 import { quotes } from "./res";
 // import video from "../images/video.mp4";

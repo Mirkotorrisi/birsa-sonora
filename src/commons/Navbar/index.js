@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import NavLink from "./NavLink";
-import logoBrisa from "../../images/logo_brisa.png";
+import logoBrisa from "../../images/logo_brisa.webp";
 
 const Navbar = () => {
   const [menuShow, setMenu] = React.useState(false);

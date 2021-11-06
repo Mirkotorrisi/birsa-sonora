@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/logo_brisa.png",
+        icon: "src/images/logo_brisa.webp",
       },
     },
     "gatsby-transformer-remark",

@@ -17,9 +17,9 @@
   text-shadow: 1px 1px 1px var(--black);
   transition: all 0.2s ease-in;
   &__block {
-    background: url(../../images/nav_decorator.png);
+    background: url(../../images/nav_decorator.webp);
     background-size: 20px 100%;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
   }
   &:hover {
     background-position: 0% 100%;
