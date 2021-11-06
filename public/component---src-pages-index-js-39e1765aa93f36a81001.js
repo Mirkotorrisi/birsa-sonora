@@ -160,18 +160,18 @@
       }
       var m = [
           {
-            src: n.p + "static/foto-1-d419c1bef663b44d326025705563deb1.jpeg",
+            src: n.p + "static/foto-1-d419c1bef663b44d326025705563deb1.webp",
             alt: "alt_foto",
             desc: "Qui va scritto qualcosa e la foto va sostituita. Le foto devono avere tutte le stesse dimensioni. Il messaggio deve essere sintetico ma efficace, comunicare il valore aggiunto della scuola. La foto deve trasmettere PROFESSIONALITA'",
           },
           {
             alt: "alt_foto",
-            src: n.p + "static/foto-2-91b28472918746e6458059de9bfe0ff2.jpeg",
+            src: n.p + "static/foto-2-91b28472918746e6458059de9bfe0ff2.webp",
             desc: "Qui va scritto qualcosa e la foto va sostituita. Le foto devono avere tutte le stesse dimensioni. Il messaggio deve essere sintetico ma efficace, comunicare il valore aggiunto della scuola. La foto deve trasmettere PROFESSIONALITA'",
           },
           {
             alt: "alt_foto",
-            src: n.p + "static/foto-3-9e0161f1c00f7078508e5f9887de5235.jpeg",
+            src: n.p + "static/foto-3-9e0161f1c00f7078508e5f9887de5235.webp",
             desc: "Qui va scritto qualcosa e la foto va sostituita. Le foto devono avere tutte le stesse dimensioni. Il messaggio deve essere sintetico ma efficace, comunicare il valore aggiunto della scuola. La foto deve trasmettere PROFESSIONALITA'",
           },
         ],
