@@ -19,6 +19,11 @@ const IndexPage = () => {
           name="description"
           content="Brisa Sonora corsi di musica, lezioni di pianoforte, chitarra, violino, sassofono a Catania. associazione musicale."
         />
+        <meta name="robots" content="index,follow" />
+        <meta
+          name="keywords"
+          content="musica lezioni corsi pianoforte violino sassofono chitarra catania san gregorio strumenti musicali aci sant'antonio paesi etnei valverde aci catena corsi di musica associazione musicale conservatorio"
+        />
         <title>Brisa Sonora</title>
       </Helmet>
       <NavProvider>
