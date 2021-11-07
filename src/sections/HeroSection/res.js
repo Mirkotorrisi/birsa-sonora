@@ -30,7 +30,7 @@ export const quotes = [
   {
     quote: "Il 20% dei ragazzi impara a suonare.",
     secondline: "Il 70% degli adulti vorrebbe averlo fatto.",
-    author: "Anonimo",
+    author: "",
   },
   {
     quote: "Se apprendi la musica,",

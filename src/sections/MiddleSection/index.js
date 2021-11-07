@@ -33,7 +33,7 @@ export default function MiddleSection() {
           <div
             className={`middle-section__picture items-center ${
               i !== pictures.length - 1 ? "pb-36" : ""
-            } flex-col xl:flex-row${i % 2 === 0 ? "-reverse" : ""}`}
+            } flex-col lg:flex-row${i % 2 === 0 ? "-reverse" : ""}`}
             key={pic.alt + i + "o"}
           >
             <img

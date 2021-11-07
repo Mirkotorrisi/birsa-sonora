@@ -16,9 +16,7 @@ export default function HeroSection() {
   let tl = gsap.timeline({
     delay: 1,
   });
-  const [index, setindex] = useState(
-    Math.round(Math.random() * (quotes.length - 1))
-  );
+  const [index, setindex] = useState(0);
 
   useEffect(() => {
     interval = setInterval(() => {
@@ -78,7 +76,7 @@ export default function HeroSection() {
           src={video}
           style={{ position: "fixed", top: 0, left: 1200, zIndex: 1 }}
         /> */}
-        <div className="hero-section__title mt-20">
+        <div className="hero-section__title my-10">
           <div className="hidden md:inline logo">
             <Logo style={{ width: 150, maxWidth: "15vw", marginRight: 10 }} />
           </div>
@@ -108,12 +106,17 @@ export default function HeroSection() {
             <span className="text">{quotes[index].author}</span>
           </p>
         </div>
-        <div className="hero-section__ctas ">
-          <button className="hero-section__ctas__contact my-36 lg:mt-0">
-            <a href="#contact" className="contact_cta">
-              Contattaci
-            </a>
-          </button>
+        <div className="mt-36">
+          <h2 className="hero-section__proposal  lg:mb-10">
+            Prenota ora la tua lezione di prova gratuita
+          </h2>
+          <div className="hero-section__ctas ">
+            <button className="hero-section__ctas__contact mb-36 mt-10 lg:mt-0">
+              <a href="#contact" className="contact_cta">
+                Contattaci
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </header>
