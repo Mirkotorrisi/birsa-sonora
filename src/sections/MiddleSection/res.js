@@ -19,6 +19,6 @@ export const pictures = [
     alt: "alt_foto",
     title: "Saggi e rassegne",
     src: foto3,
-    desc: "Organizziamo e incentiviamo esibizione, con saggi e rassegne periodiche di ogni livello. Per ogni evento forniamo attestati di partecipazione.",
+    desc: "Organizziamo e incentiviamo esibizioni, con saggi e rassegne periodiche di ogni livello. Per ogni evento forniamo attestati di partecipazione.",
   },
 ];
