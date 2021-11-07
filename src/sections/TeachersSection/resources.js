@@ -26,7 +26,7 @@ export const teachers = [
     src: anninaPng,
     instrument: saxPng,
     name: "Giorgio Garozzo",
-    bio: "Studia pianoforte da quando ha 5 anni. Entra al Conservatorio Vincenzo Bellini di Catania conseguendo la laurea triennale e la biennale specialistica con il massimo dei voti. \n\nHa fatto parte di svariate formazioni da camera, principalmente in duo con contrabbassisti e con cantanti; è stata pianista accompagnatrice del coro lirico NAMAE diretto dal maestro Carmelo Pappalardo. Attualmente frequenta la classe di fisarmonica classica presso il Conservatorio Arcangelo Corelli di Messina con il Maestro Ivano Biscardi.",
+    bio: "Inizia lo studio del sassofono all’età di 9 anni. \n\n Nel 2018 consegue la laurea trienniale di I livello in Sassofono Jazz con il massimo dei voti. \n\n Nel marzo 2021 consegue la laurea al biennio di II livello in Sassofono Jazz presso il Conservatorio V. Bellini di Catania con 110/110 e lode. \n\n Ha partecipato a diversi concerti presso il teatro ABC, il Teatro Vincenzo Bellini di Catania, il Teatro Sangiorgi. Attualmente è attivo con varie formazioni jazz, con i SundayBeatProject e i MagmaFunk.",
     alt: "giorgio",
     altInstr: "sax",
   },

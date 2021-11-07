@@ -24,32 +24,38 @@ export default function MiddleSection() {
   return (
     <>
       <section
-        className="middle-section px-10 pt-20 lg:px-60 xl:px-96"
+        className="middle-section  px-10 pt-20 lg:px-60 xl:px-96 "
         ref={ref}
         id="about"
       >
         <h1 className="title mb-20">La scuola </h1>
         {pictures.map((pic, i) => (
-          <div
-            className={`middle-section__picture items-center ${
-              i !== pictures.length - 1 ? "pb-36" : ""
-            } flex-col lg:flex-row${i % 2 === 0 ? "-reverse" : ""}`}
-            key={pic.alt + i + "o"}
-          >
-            <img
-              src={pic.src}
-              alt={pic.alt}
-              className={`middle-section__picture__img ${
-                i % 2 === 0 ? "xl:ml-10" : "xl:mr-10"
-              }`}
-              id={`img-${i}`}
-            />
-            <p
-              className="middle-section__picture__desc mt-10 xl:mt-0 "
-              id={`p-${i}`}
+          <div className="mt-20">
+            <h2 className="middle-section__picture__title mb-10 mt-20 lg:mt-0">
+              {pic.title}
+            </h2>
+            <div
+              className={`middle-section__picture items-start lg:items-center ${
+                i !== pictures.length - 1 ? "pb-36" : ""
+              } flex-col lg:flex-row${i % 2 === 0 ? "-reverse" : ""}`}
+              key={pic.alt + i + "o"}
             >
-              {pic.desc}
-            </p>
+              <img
+                src={pic.src}
+                alt={pic.alt}
+                className={`middle-section__picture__img ${
+                  i % 2 === 0 ? "lg:ml-10" : "lg:mr-10"
+                }`}
+                id={`img-${i}`}
+              />
+
+              <p
+                className="middle-section__picture__desc mt-20 lg:mt-0 "
+                id={`p-${i}`}
+              >
+                {pic.desc}
+              </p>
+            </div>
           </div>
         ))}
       </section>
