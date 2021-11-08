@@ -77,7 +77,7 @@ export default function HeroSection() {
           style={{ position: "fixed", top: 0, left: 1200, zIndex: 1 }}
         /> */}
         <div className="hero-section__title my-10">
-          <div className="hidden md:inline logo">
+          <div className="hidden lg:inline logo">
             <Logo style={{ width: 150, maxWidth: "15vw", marginRight: 10 }} />
           </div>
           <div className="hero-section__title__logotipo">
