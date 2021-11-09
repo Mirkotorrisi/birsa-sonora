@@ -133,7 +133,6 @@ export default function TeachersCarousel({ index, setIndex, interval }) {
                 }deg) translateZ(${tz - 250}px)`,
                 position: "absolute",
                 width: 500,
-                height: 300,
               }}
               key={`div_child${indexTeach}2`}
             >

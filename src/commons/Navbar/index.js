@@ -1,20 +1,16 @@
 import React from "react";
 import "./index.scss";
 import NavLink from "./NavLink";
-import logoBrisa from "../../images/logo_brisa.webp";
+import logocompleto from "../../images/logocompleto.png";
 
 const Navbar = () => {
   const [menuShow, setMenu] = React.useState(false);
   const showMenu = () => setMenu(!menuShow);
 
   return (
-    <nav className="navbar flex fixed items-center justify-between flex-wrap w-screen py-4 lg:py-0 px-10 lg:px-60 xl:px-96 ">
+    <nav className="navbar flex fixed items-center justify-between flex-wrap w-screen py-4 lg:py-0 px-10 ">
       <a href="#hero-section">
-        <img
-          src={logoBrisa}
-          alt="logo-brisa"
-          className="lg:hidden navbar__logo"
-        />
+        <img src={logocompleto} alt="logo-brisa" className="navbar__logo" />
       </a>
       <div className="flex align-center justify-between lg:hidden">
         <button aria-label="menu" className="mr-10 w-0" onClick={showMenu}>
@@ -37,14 +33,14 @@ const Navbar = () => {
         </button>
       </div>
       <div
-        className={`w-full block flex-grow lg:flex lg:items-right lg:w-auto ${
+        className={`w-full block lg:flex lg:items-right lg:w-auto ${
           menuShow ? "" : "h-0"
         } lg:h-full`}
       >
         <div
           className={` ${
             !menuShow ? "hidden" : ""
-          } lg:flex flex-col lg:flex-row flexitems-center mt-5 lg:mt-0 justify-between lg:flex-grow w-full`}
+          } lg:flex flex-col lg:flex-row  mt-5 lg:mt-0 lg:px-36`}
         >
           <NavLink link="#about">La scuola</NavLink>
           <NavLink link="#contact">Contatti</NavLink>

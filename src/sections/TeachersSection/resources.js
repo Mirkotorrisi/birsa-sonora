@@ -1,5 +1,6 @@
 import anninaPng from "../../images/anninaPng.webp";
 import lauraPng from "../../images/lauraPng.webp";
+import giorgioPng from "../../images/giorgioPng.webp";
 import pianoPng from "../../images/pianoPng.webp";
 import violinPng from "../../images/violin.webp";
 import saxPng from "../../images/saxPng.webp";
@@ -23,7 +24,7 @@ export const teachers = [
     altInstr: "violin",
   },
   {
-    src: anninaPng,
+    src: giorgioPng,
     instrument: saxPng,
     name: "Giorgio Garozzo",
     bio: "Inizia lo studio del sassofono all’età di 9 anni. \n\n Nel 2018 consegue la laurea trienniale di I livello in Sassofono Jazz con il massimo dei voti. \n\n Nel marzo 2021 consegue la laurea al biennio di II livello in Sassofono Jazz presso il Conservatorio V. Bellini di Catania con 110/110 e lode. \n\n Ha partecipato a diversi concerti presso il teatro ABC, il Teatro Vincenzo Bellini di Catania, il Teatro Sangiorgi. Attualmente è attivo con varie formazioni jazz, con i SundayBeatProject e i MagmaFunk.",
@@ -34,7 +35,7 @@ export const teachers = [
     src: lauraPng,
     instrument: guitarPng,
     name: "Ivan Rinaldi",
-    bio: "Nata a Catania nel 1997, comincia a studiare violino all’età di 7 anni. \n\n A 15 anni entra al conservatorio di Catania conseguendo la laurea triennale nel 2019. \n\nAttualmente frequenta l’ultimo anno del biennio specialistico sempre al conservatorio di Catania. \n\nHa fatto parte di diverse importanti orchestre tra cui l’orchestra giovanile del teatro dell’opera di Roma e la prima orchestra giovanile del maestro Beppe Vessicchio.",
+    bio: "Segue privatamente lezioni di chitarra classica/moderna fin dall'età di 10 anni, procedendo nell’approfondimento fino al conseguimento della laurea in chitarra jazz con 110 e lode. \n\nHa seguito diverse masterclass di chitarra classica/moderna con docenti del calibro di Giovanni Puddu e Stochelo Rosenberg. \n\n Insegna chitarra classica e moderna da più di 12 anni.",
     alt: "ivan",
     altInstr: "guitar",
   },
@@ -55,10 +56,10 @@ export const teachers = [
     altInstr: "violin",
   },
   {
-    src: anninaPng,
+    src: giorgioPng,
     instrument: saxPng,
     name: "Giorgio Garozzo",
-    bio: "Studia pianoforte da quando ha 5 anni. Entra al Conservatorio Vincenzo Bellini di Catania conseguendo la laurea triennale e la biennale specialistica con il massimo dei voti. \n\nHa fatto parte di svariate formazioni da camera, principalmente in duo con contrabbassisti e con cantanti; è stata pianista accompagnatrice del coro lirico NAMAE diretto dal maestro Carmelo Pappalardo. Attualmente frequenta la classe di fisarmonica classica presso il Conservatorio Arcangelo Corelli di Messina con il Maestro Ivano Biscardi.",
+    bio: "Inizia lo studio del sassofono all’età di 9 anni. \n\n Nel 2018 consegue la laurea trienniale di I livello in Sassofono Jazz con il massimo dei voti. \n\n Nel marzo 2021 consegue la laurea al biennio di II livello in Sassofono Jazz presso il Conservatorio V. Bellini di Catania con 110/110 e lode. \n\n Ha partecipato a diversi concerti presso il teatro ABC, il Teatro Vincenzo Bellini di Catania, il Teatro Sangiorgi. Attualmente è attivo con varie formazioni jazz, con i SundayBeatProject e i MagmaFunk.",
     alt: "giorgio",
     altInstr: "sax",
   },
@@ -66,7 +67,7 @@ export const teachers = [
     src: lauraPng,
     instrument: guitarPng,
     name: "Ivan Rinaldi",
-    bio: "Nata a Catania nel 1997, comincia a studiare violino all’età di 7 anni. \n\n A 15 anni entra al conservatorio di Catania conseguendo la laurea triennale nel 2019. \n\nAttualmente frequenta l’ultimo anno del biennio specialistico sempre al conservatorio di Catania. \n\nHa fatto parte di diverse importanti orchestre tra cui l’orchestra giovanile del teatro dell’opera di Roma e la prima orchestra giovanile del maestro Beppe Vessicchio.",
+    bio: "Segue privatamente lezioni di chitarra classica/moderna fin dall'età di 10 anni, procedendo nell’approfondimento fino al conseguimento della laurea in chitarra jazz con 110 e lode. \n\nHa seguito diverse masterclass di chitarra classica/moderna con docenti del calibro di Giovanni Puddu e Stochelo Rosenberg. \n\n Insegna chitarra classica e moderna da più di 12 anni.",
     alt: "ivan",
     altInstr: "guitar",
   },

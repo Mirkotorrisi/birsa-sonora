@@ -1,7 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
 
-import Logo from "../../../public/static/svg/logo_brisa.svg";
 import Ondine from "../../../public/static/svg/ondineMod_anim.svg";
 import violinBg from "../../images/violin.webp";
 import { useNav } from "../../hooks/useNav";
@@ -77,16 +76,19 @@ export default function HeroSection() {
           style={{ position: "fixed", top: 0, left: 1200, zIndex: 1 }}
         /> */}
         <div className="hero-section__title my-10">
-          <div className="hidden lg:inline logo">
-            <Logo style={{ width: 150, maxWidth: "15vw", marginRight: 10 }} />
-          </div>
-          <div className="hero-section__title__logotipo">
-            <h1>
-              Brisa
-              <span>Sonora</span>
-            </h1>
-            <p className="hero-section__title__sublogo">Corsi di musica</p>
-          </div>
+          <h1>
+            Impara a <span>suonare</span> con noi
+          </h1>
+        </div>
+        <h2 className="hero-section__proposal  lg:mb-10">
+          Prenota ora la tua lezione di prova gratuita
+        </h2>
+        <div className="hero-section__ctas ">
+          <button className="hero-section__ctas__contact mb-72 mt-10 lg:mt-0">
+            <a href="#contact" className="contact_cta">
+              Contattaci
+            </a>
+          </button>
         </div>
         <div>
           <p
@@ -105,18 +107,6 @@ export default function HeroSection() {
           <p className="hero-section__subtitle__author hide mb-5">
             <span className="text">{quotes[index].author}</span>
           </p>
-        </div>
-        <div className="mt-36">
-          <h2 className="hero-section__proposal  lg:mb-10">
-            Prenota ora la tua lezione di prova gratuita
-          </h2>
-          <div className="hero-section__ctas ">
-            <button className="hero-section__ctas__contact mb-36 mt-10 lg:mt-0">
-              <a href="#contact" className="contact_cta">
-                Contattaci
-              </a>
-            </button>
-          </div>
         </div>
       </div>
     </header>
