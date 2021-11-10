@@ -90,7 +90,7 @@ export default function HeroSection() {
             </a>
           </button>
         </div>
-        <div>
+        <div className="hero-section__quote">
           <p
             className={
               "hero-section__subtitle hide " +

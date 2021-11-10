@@ -46,7 +46,9 @@
     }
     color: var(--black);
   }
-
+  &__quote {
+    min-height: 200px;
+  }
   &__subtitle {
     color: var(--black);
     font-size: 2rem;
@@ -130,6 +132,9 @@
     }
     &__violin {
       top: -2%;
+    }
+    &__title {
+      letter-spacing: -4px;
     }
   }
   .logo_sub {
