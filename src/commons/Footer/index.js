@@ -4,7 +4,7 @@ import logocompleto from "../../images/logocompleto.webp";
 import "./index.scss";
 
 const Footer = () => (
-  <footer className="footer flex flex-col md:flex-row items-center justify-between flex-wrap w-screen p-3 lg:px-60 xl:px-96 py-20">
+  <footer className="footer flex flex-col md:flex-row items-center justify-between flex-wrap w-screen p-3 lg:px-36 xl:px-48 py-20">
     <div className="footer__section">
       <img
         src={logocompleto}

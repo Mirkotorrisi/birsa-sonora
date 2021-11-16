@@ -79,8 +79,7 @@ export default function TeachersCarousel({ index, setIndex, interval }) {
                 style={{
                   position: "absolute",
                   width: 500,
-                  height: 300,
-                  // background: "rgba(100, 100, 100, 0.3)",
+                  height: "200%",
                 }}
                 key={`div_child_touch${indexTeach}`}
               />

@@ -25,13 +25,18 @@
   background-size: cover;
   &__violin {
     position: absolute;
-    top: -30%;
+    top: -100px;
     transform: rotate(30deg);
-    max-width: 70vw;
+    max-width: 50vw;
     z-index: 100001;
     pointer-events: none;
   }
+  .piano {
+    transform: rotate(100deg);
+    top: 20%;
 
+    z-index: 1;
+  }
   &__title {
     display: flex;
     align-items: flex-end;
@@ -64,6 +69,7 @@
   &__proposal {
     font-size: 2rem;
     font-weight: 700;
+    max-width: clamp(30rem, 50vw, 45rem);
     font-family: Montserrat, Arial, Helvetica, sans-serif;
   }
   &__ctas {
@@ -129,9 +135,6 @@
   .hero-section {
     &__ctas a {
       font-size: 2.2rem;
-    }
-    &__violin {
-      top: -2%;
     }
     &__title {
       letter-spacing: -4px;

@@ -21,6 +21,10 @@ const IndexPage = () => {
         />
         <meta name="robots" content="index,follow" />
         <meta
+          name="google-site-verification"
+          content="1PIQqEL0OgbiTPjG0fiPZ9rOcO30wM00ZIqtViP6IWo"
+        />
+        <meta
           name="keywords"
           content="musica lezioni corsi pianoforte violino sassofono chitarra catania san gregorio strumenti musicali aci sant'antonio paesi etnei valverde aci catena corsi di musica associazione musicale conservatorio"
         />

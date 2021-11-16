@@ -7,7 +7,7 @@ export const pictures = [
     src: foto1,
     title: "Lezioni professionali per ogni necessità",
     alt: "alt_foto",
-    desc: "Le nostre lezioni sono adatte a studenti di qualsiasi livello e rispondono a qualsiasi necessità: dall'amatore che vuole scoprire un nuovo passatempo allo studente di conservatorio che ha bisogno di una mano per qualche specifica materia. I nostri insegnanti sono tutti altamente qualificati e laureati al conservatorio.",
+    desc: "Le nostre lezioni sono adatte a studenti di qualsiasi livello e rispondono a qualsiasi necessità: dall'amatore che vuole scoprire un nuovo passatempo allo studente di conservatorio che ha bisogno di una mano per qualche specifica materia.",
   },
   {
     alt: "alt_foto",

@@ -7,7 +7,6 @@ import { PHONE_NUMBER, LAURA_NUMBER, EMAIL } from "./resources.js";
 
 export default function ContactSection() {
   const ref = useNav("#contact");
-  const [interacted, setInteracted] = useState(false);
   const [input, setInput] = useState("");
   const [contact, setContact] = useState("");
   const [modalMsg, setModalMsg] = useState("");
@@ -17,9 +16,9 @@ export default function ContactSection() {
   const whatsappLink = `https://wa.me/+39${PHONE_NUMBER}/?text=${input}`;
   const q = gsap.utils.selector(ref);
 
-  const sendMessage = (e) => {
+  const sendMessage = async (e) => {
     e.preventDefault();
-    const res = requestSendMessage({ input, contact });
+    const res = await requestSendMessage({ input, contact });
     setModalMsg(res);
   };
 
@@ -39,7 +38,7 @@ export default function ContactSection() {
 
   return (
     <section
-      className="contact-section py-36 lg:py-20 px-10 lg:px-60 xl:px-96"
+      className="contact-section py-36 lg:py-20 px-10 lg:px-36 xl:px-48"
       ref={ref}
       id="contact"
     >
@@ -64,15 +63,12 @@ export default function ContactSection() {
               id="message"
               type="text"
               required
-              className={`contact-section__form__input${
-                !interacted ? "--anim" : ""
-              } mt-10`}
+              className={`contact-section__form__input mt-10`}
               style={{
                 minHeight: "3rem",
                 height: `${input.length / 10}rem`,
               }}
               placeholder="Salve, vorrei avere maggiori informazioni..."
-              onFocus={() => setInteracted(true)}
               ref={ref}
               onChange={handleInput}
               value={input}
@@ -81,7 +77,7 @@ export default function ContactSection() {
           <input
             type="submit"
             className="contact-section__form__submit mt-10"
-            value="Invia"
+            value="Prenota"
           />
           {/* <a
               href={whatsappLink}
@@ -90,11 +86,11 @@ export default function ContactSection() {
             > */}
           {/* </a> */}
           <p className="contact-section__form__privacy">
-            Cliccando su Invia aderisci alla nostra
+            Cliccando su Prenota aderisci alla nostra
             <a
               href="https://www.iubenda.com/privacy-policy/10563366"
               title="Privacy Policy"
-              className="ml-2"
+              className="ml-2 hoverable"
               target="_blank"
             >
               Privacy Policy
@@ -103,14 +99,14 @@ export default function ContactSection() {
         </form>
         <h3 className="mt-20">
           In alternativa, puoi chiamare uno di questi numeri:
-          <a href={`tel:${PHONE_NUMBER}`} className="phone_number">
+          <a href={`tel:${PHONE_NUMBER}`} className="phone_number hoverable">
             +39 {PHONE_NUMBER}
           </a>
-          <a href={`tel:${LAURA_NUMBER}`} className="phone_number">
+          <a href={`tel:${LAURA_NUMBER}`} className="phone_number hoverable">
             +39 {LAURA_NUMBER}
           </a>
           O mandare un'email a{" "}
-          <a href={`mailto:${EMAIL}`} className="phone_number">
+          <a href={`mailto:${EMAIL}`} className="phone_number hoverable">
             {EMAIL}
           </a>
         </h3>

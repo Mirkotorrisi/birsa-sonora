@@ -73,28 +73,13 @@
       background: none;
       font-style: italic;
       color: #595959;
-      width: 100%;
+      width: 30rem;
       height: 100%;
       overflow: visible;
       overflow-wrap: break-word;
       min-width: 1em;
-      padding-bottom: 0;
-      &--anim {
-        resize: none;
-        background: none;
-        font-style: italic;
-        color: #595959;
-        border-right: 0.15em solid var(--primary_blue); /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        animation: typing 3.5s steps(40, end) infinite,
-          blink-caret 0.75s step-end infinite;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-      }
-
-      &__container {
-        width: 30rem;
-        border-bottom: 2px solid var(--black);
-      }
+      margin-bottom: -0;
+      border-bottom: 2px solid var(--black);
     }
     &__privacy {
       a {
@@ -129,11 +114,21 @@
         color: var(--primary_blue);
         box-shadow: 1px 1px 10px var(--primary_blue);
         text-shadow: none;
+        cursor: pointer;
       }
     }
   }
   .title {
     color: var(--primary_blue);
+  }
+  .hoverable {
+    width: fit-content;
+    box-sizing: border-box;
+    border-bottom: 2px solid transparent;
+    transition: all ease-in 0.2s;
+    &:hover {
+      border-bottom: 2px solid var(--primary_blue);
+    }
   }
   .phone_number {
     display: block;
@@ -152,25 +147,6 @@
   }
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: var(--primary_blue);
-  }
-}
 @keyframes movebg {
   0% {
     background-position: 20%;

@@ -38,6 +38,7 @@
     box-shadow: 1px 1px 5px 1px var(--black), -1px 2px 5px 1px #30b7c662;
     max-width: 50%;
     min-width: 320px;
+    height: fit-content;
   }
   &__name {
     font-family: Nunito;

@@ -33,7 +33,7 @@ export default function MiddleSection() {
 
   return (
     <section
-      className="teachers-section  pt-36 lg:pb-10 px-10 lg:px-60 xl:px-96"
+      className="teachers-section  pt-36 lg:pb-10 px-10 lg:px-36 xl:px-48"
       ref={ref}
     >
       <h1 className="title mb-10 lg:mt-20">I docenti</h1>

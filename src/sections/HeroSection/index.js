@@ -3,6 +3,7 @@ import "./index.scss";
 
 import Ondine from "../../../public/static/svg/ondineMod_anim.svg";
 import violinBg from "../../images/violin.webp";
+import pianoPng from "../../images/pianoPng.webp";
 import { useNav } from "../../hooks/useNav";
 import { quotes } from "./res";
 // import video from "../images/video.mp4";
@@ -40,6 +41,7 @@ export default function HeroSection() {
     gsap.to(q(".ond-odd"), { x: -300, opacity: 0, duration: 1, delay: 0.5 });
 
     tl.from(q(".hero-section__title"), { opacity: 0, duration: 0.5 });
+
     gsap
       .timeline({
         defaults: { duration: 1 },
@@ -50,17 +52,32 @@ export default function HeroSection() {
           scrub: true,
         },
       })
-      .fromTo(q("#violin"), { right: "30%" }, { right: "-50%" });
+      .fromTo(q("#violin"), { right: "20%" }, { right: "-30%" });
+    gsap
+      .timeline({
+        defaults: { duration: 1 },
+        scrollTrigger: {
+          trigger: "#violin",
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+        },
+      })
+      .fromTo(
+        q("#piano"),
+        { right: 0, rotation: 60 },
+        { right: -200, rotation: 130 }
+      );
     return () => clearInterval(interval);
   }, []);
 
   return (
     <header
-      className="hero-section h-screen px-10 lg:px-40 xl:px-60"
+      className="hero-section h-screen px-10 lg:px-36 xl:px-48"
       id="hero-section"
     >
       <div
-        className="hero-section__main h-full flex flex-col justify-between items-start py-36 lg:px-20 xl:px-36"
+        className="hero-section__main h-full flex flex-col justify-between items-start py-36"
         ref={ref}
       >
         <Ondine className="ondine" />
@@ -70,6 +87,13 @@ export default function HeroSection() {
           id="violin"
           aria-hidden="true"
           className="hero-section__violin hidden lg:block"
+        />
+        <img
+          src={pianoPng}
+          alt="piano"
+          id="piano"
+          aria-hidden="true"
+          className="hero-section__violin piano hidden lg:block"
         />
         {/* <video
           src={video}
@@ -81,7 +105,7 @@ export default function HeroSection() {
           </h1>
         </div>
         <h2 className="hero-section__proposal  lg:mb-10">
-          Prenota ora la tua lezione di prova gratuita
+          Prenota ora la tua lezione di prova gratuita online o in presenza
         </h2>
         <div className="hero-section__ctas ">
           <button className="hero-section__ctas__contact mb-72 mt-10 lg:mt-0">
