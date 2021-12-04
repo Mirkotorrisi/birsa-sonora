@@ -108,13 +108,13 @@ export default function HeroSection() {
           Prenota ora la tua lezione di prova gratuita online o in presenza
         </h2>
         <div className="hero-section__ctas ">
-          <button className="hero-section__ctas__contact mb-72 mt-10 lg:mt-0">
+          <button className="hero-section__ctas__contact mt-10 lg:mt-0">
             <a href="#contact" className="contact_cta">
               Contattaci
             </a>
           </button>
         </div>
-        <div className="hero-section__quote">
+        <div className="hero-section__quote mt-36">
           <p
             className={
               "hero-section__subtitle hide " +
