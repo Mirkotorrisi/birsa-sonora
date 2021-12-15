@@ -5,7 +5,11 @@
   "description": "Brisa Sonora",
   "author": "mirkotorrisi",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "musica",
+    "lezioni",
+    "violino",
+    "pianoforte"
   ],
   "scripts": {
     "develop": "gatsby develop",

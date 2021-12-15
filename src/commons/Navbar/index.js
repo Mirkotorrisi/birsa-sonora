@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import NavLink from "./NavLink";
-import logocompleto from "../../images/logocompleto.png";
+import logocompleto from "../../images/logocompleto.webp";
 
 const Navbar = () => {
   const [menuShow, setMenu] = React.useState(false);
