@@ -19,7 +19,6 @@ const IndexPage = () => {
           name="description"
           content="Brisa Sonora corsi di musica, lezioni di pianoforte, chitarra, violino, sassofono a Catania. associazione musicale."
         />
-        <meta name="robots" content="index,follow" />
         <meta
           name="google-site-verification"
           content="1PIQqEL0OgbiTPjG0fiPZ9rOcO30wM00ZIqtViP6IWo"
