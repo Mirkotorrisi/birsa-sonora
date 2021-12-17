@@ -58,7 +58,7 @@ export default function FindusSection() {
         />
       </div>
       <div className="lg:pt-20 mb-5 px-10 lg:px-36 xl:px-48">
-        <h1 className="title">Dove ci troviamo</h1>
+        <h2 className="title">Dove ci troviamo</h2>
         <address className="mt-10 pl-2 ">
           La nostra sede è in Via Tenente Garozzo, 2 95025
           <p>Aci Sant'Antonio (CT)</p>

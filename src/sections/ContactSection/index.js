@@ -42,7 +42,7 @@ export default function ContactSection() {
       ref={ref}
       id="contact"
     >
-      <h1 className="title">Contattaci</h1>
+      <h2 className="title">Contattaci</h2>
       <div className="contact-section__form mt-20">
         <h3 className="contact-section__form__title">
           Prenota ora la tua lezione di prova gratuita, ti risponderemo il prima

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.brisasonora.it",
+    siteUrl: "https://brisasonora.it",
     title: "Brisa Sonora",
   },
   plugins: [
@@ -10,6 +10,15 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-postcss",
     "gatsby-plugin-sitemap",
+    "gatsby-plugin-next-seo",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://brisasonora.it",
+        sitemap: "https://brisasonora.it/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
