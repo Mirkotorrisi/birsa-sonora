@@ -1,4 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 import { requestSendMessage } from "../../services";
 import { gsap } from "gsap";
 import { useNav } from "../../hooks/useNav";
@@ -13,12 +14,16 @@ export default function ContactSection() {
 
   const handleInput = (e) => setInput(e.target.value);
   const handleContact = (e) => setContact(e.target.value);
-  const whatsappLink = `https://wa.me/+39${PHONE_NUMBER}/?text=${input}`;
   const q = gsap.utils.selector(ref);
 
   const sendMessage = async (e) => {
     e.preventDefault();
     const res = await requestSendMessage({ input, contact });
+    trackCustomEvent({
+      category: "Contact Button",
+      action: `${input} - ${contact}`,
+      label: "Message request",
+    });
     setModalMsg(res);
   };
 

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { useNav } from "../../hooks/useNav";
 import "./index.scss";
@@ -7,7 +7,6 @@ import NoteRighe from "../../../public/static/svg/note_with_righe.svg";
 export default function FindusSection() {
   const ref = useNav("#findus");
   const q = gsap.utils.selector(ref);
-  const isBrowser = typeof document !== "undefined";
 
   useEffect(() => {
     gsap
@@ -43,8 +42,8 @@ export default function FindusSection() {
     }
   }
   useEffect(() => {
-    if (isBrowser && document.readyState === "complete") deferIframe();
-  }, [isBrowser]);
+    setTimeout(() => deferIframe(), 5000);
+  }, []);
   return (
     <section className="find-us" id="findus" ref={ref}>
       <div className="notes_cont">

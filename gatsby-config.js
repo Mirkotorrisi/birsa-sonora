@@ -12,6 +12,15 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-next-seo",
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-MHDMGE4Q69",
+        anonymize: true,
+        respectDNT: true,
+        defer: true,
+      },
+    },
+    {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://brisasonora.it",
