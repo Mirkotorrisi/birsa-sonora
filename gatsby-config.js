@@ -11,21 +11,27 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-next-seo",
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "G-MHDMGE4Q69",
-        anonymize: true,
-        respectDNT: true,
-        defer: true,
-      },
-    },
+
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://brisasonora.it",
         sitemap: "https://brisasonora.it/sitemap/sitemap-index.xml",
         policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["UA-215619920-1"],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+        },
       },
     },
     {

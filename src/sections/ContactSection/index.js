@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { trackCustomEvent } from "gatsby-plugin-google-analytics";
 import { requestSendMessage } from "../../services";
 import { gsap } from "gsap";
 import { useNav } from "../../hooks/useNav";
@@ -19,11 +18,9 @@ export default function ContactSection() {
   const sendMessage = async (e) => {
     e.preventDefault();
     const res = await requestSendMessage({ input, contact });
-    trackCustomEvent({
-      category: "Contact Button",
-      action: `${input} - ${contact}`,
-      label: "Message request",
-    });
+    typeof window !== "undefined" &&
+      window.gtag("event", "click", { input, contact });
+
     setModalMsg(res);
   };
 
