@@ -1,10 +1,7 @@
 import anninaPng from "../../images/anninaPng.webp";
 import lauraPng from "../../images/lauraPng.webp";
-import giorgioPng from "../../images/giorgioPng.webp";
 import pianoPng from "../../images/pianoPng.webp";
 import violinPng from "../../images/violin.webp";
-import saxPng from "../../images/saxPng.webp";
-import guitarPng from "../../images/guitarPng.webp";
 
 export const teachers = [
   {

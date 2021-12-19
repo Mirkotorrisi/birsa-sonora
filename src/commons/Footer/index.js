@@ -23,7 +23,7 @@ const Footer = () => (
     </div>
     <div className="footer__section flex justify-between">
       {socials.map(({ src, href }, index) => (
-        <a href={href}>
+        <a href={href} key={src.split(".")[0]}>
           <img
             src={src}
             alt={href.slice(12, 20)}

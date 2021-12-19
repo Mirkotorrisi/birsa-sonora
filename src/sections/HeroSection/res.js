@@ -1,7 +1,5 @@
 import violinIcon from "../../images/violinIcon.webp";
-import saxIcon from "../../images/saxIcon.webp";
 import pianoIcon from "../../images/pianoIcon.webp";
-import guitarIcon from "../../images/guitarIcon.webp";
 
 export const instruments = [
   {
@@ -13,16 +11,6 @@ export const instruments = [
     imgSrc: violinIcon,
     alt: "violin",
     title: "Violino",
-  },
-  {
-    imgSrc: saxIcon,
-    alt: "sax",
-    title: "Sassofono",
-  },
-  {
-    imgSrc: guitarIcon,
-    alt: "guitar",
-    title: "Chitarra",
   },
 ];
 

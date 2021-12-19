@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./index.scss";
 import { useNav } from "../../hooks/useNav";
 import { gsap } from "gsap";
@@ -10,15 +10,17 @@ export default function MiddleSection() {
   const q = gsap.utils.selector(ref);
 
   useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".middle-section__picture",
-          start: "top center",
-        },
-      })
-      .from(q("img"), { xPercent: -50, opacity: 0 }, 0)
-      .from(q("p"), { xPercent: 50, opacity: 0 }, 0);
+    pictures.forEach((pic, i) => {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: `#middle-${i}`,
+            start: "top center",
+          },
+        })
+        .from(q(`#img-${i}`), { xPercent: -50, opacity: 0 }, 0)
+        .from(q(`#p-${i}`), { xPercent: 50, opacity: 0 }, 0);
+    });
   }, []);
 
   return (
@@ -29,7 +31,7 @@ export default function MiddleSection() {
         id="about"
       >
         {pictures.map((pic, i) => (
-          <div className="mt-20">
+          <div className="mt-20" key={pic.title} id={`middle-${i}`}>
             <h2 className="middle-section__picture__title mb-10 mt-20 lg:mt-0">
               {pic.title}
             </h2>

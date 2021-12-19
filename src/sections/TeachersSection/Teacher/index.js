@@ -1,22 +1,32 @@
 import "./index.scss";
-import React, { useState, useEffect, useRef } from "react";
-import { teachers } from "../resources.js";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 export default function Teacher({ teacher, instrument }) {
   const ref = useRef(null);
   const q = gsap.utils.selector(ref);
-
+  const name = teacher?.name.split(" ")[0];
   useEffect(() => {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: ".teacher",
+          trigger: `#${name}`,
           start: "top center",
         },
       })
 
-      .from(q("p"), { xPercent: 50, opacity: 0, stagger: 0.1 }, 0);
+      .from(q(`#${name}-desc`), { yPercent: 50, opacity: 0, stagger: 0.5 }, 0);
+    gsap
+      .timeline({
+        defaults: { duration: 1 },
+        scrollTrigger: {
+          trigger: q(`#${name}`),
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      })
+      .to(q(`#${name}-instrument`), { y: "10%", x: "30%" });
     gsap
       .timeline({
         defaults: { duration: 1 },
@@ -27,21 +37,10 @@ export default function Teacher({ teacher, instrument }) {
           scrub: true,
         },
       })
-      .to(q(".teachers-section__picture__instrument"), { y: "10%", x: "30%" });
-    gsap
-      .timeline({
-        defaults: { duration: 1 },
-        scrollTrigger: {
-          trigger: q(".teacher"),
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      })
-      .to(q(".teachers-section__picture__face"), { y: "10%" });
+      .to(q(`#${name}-picture`), { y: "10%" });
   }, []);
   return (
-    <div className="flex flex-col mt-20 lg:mt-0 teacher" ref={ref}>
+    <div className="flex flex-col mt-20 lg:mt-0 teacher" ref={ref} id={name}>
       <h2 className="teachers-section__name mt-10">
         <img
           src={instrument.imgSrc}
@@ -63,6 +62,7 @@ export default function Teacher({ teacher, instrument }) {
             src={teacher?.instrument}
             alt={teacher?.altInstr}
             className={`teachers-section__picture__instrument noselect`}
+            id={`${name}-instrument`}
             style={{
               transform: `rotateY(180deg) translateX(-30%) rotateX(-200deg) translateZ(-1px)`,
               WebkitTransform: `rotateY(180deg)`,
@@ -72,6 +72,7 @@ export default function Teacher({ teacher, instrument }) {
             src={teacher?.src}
             alt={teacher?.alt}
             className={`teachers-section__picture__face noselect`}
+            id={`${name}-picture`}
             style={{
               position: "absolute",
               backfaceVisibility: "hidden",
@@ -82,7 +83,7 @@ export default function Teacher({ teacher, instrument }) {
             }}
           />
         </div>
-        <div className="teachers-section__desc p-10">
+        <div className="teachers-section__desc p-10" id={`${name}-desc`}>
           <p className="teachers-section__bio">{teacher?.bio}</p>
         </div>
       </div>
