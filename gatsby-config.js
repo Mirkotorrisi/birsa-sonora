@@ -20,20 +20,20 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: ["UA-215619920-1"],
-        gtagConfig: {
-          anonymize_ip: true,
-          cookie_expires: 0,
-        },
-        pluginConfig: {
-          head: false,
-          respectDNT: true,
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: ["UA-215619920-1"],
+    //     gtagConfig: {
+    //       anonymize_ip: true,
+    //       cookie_expires: 0,
+    //     },
+    //     pluginConfig: {
+    //       head: false,
+    //       respectDNT: true,
+    //     },
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-manifest",
       options: {

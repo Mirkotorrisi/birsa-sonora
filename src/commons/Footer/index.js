@@ -11,6 +11,15 @@ const Footer = () => (
         alt="brisa sonora logo"
         className={"footer__section__logo"}
       />
+      <address className="mt-4">
+        Via Ten Garozzo 2 Aci Sant'antonio, Catania
+      </address>
+      <a
+        href="https://www.iubenda.com/privacy-policy/10563366"
+        title="Privacy Policy "
+      >
+        Privacy Policy
+      </a>
     </div>
     <div className="footer__section flex justify-between">
       {socials.map(({ src, href }, index) => (
