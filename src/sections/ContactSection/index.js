@@ -18,9 +18,6 @@ export default function ContactSection() {
   const sendMessage = async (e) => {
     e.preventDefault();
     const res = await requestSendMessage({ input, contact });
-    typeof window !== "undefined" &&
-      window.gtag("event", "click", { input, contact });
-
     setModalMsg(res);
   };
 
@@ -107,7 +104,7 @@ export default function ContactSection() {
           <a href={`tel:${LAURA_NUMBER}`} className="phone_number hoverable">
             +39 {LAURA_NUMBER}
           </a>
-          O mandare un'email a{" "}
+          O mandare un'email a
           <a href={`mailto:${EMAIL}`} className="phone_number hoverable">
             {EMAIL}
           </a>
