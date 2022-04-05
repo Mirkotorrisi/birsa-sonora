@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar flex fixed items-center justify-between flex-wrap w-screen py-4 lg:py-0 px-10 ">
-      <a href="#hero-section">
+      <a href="/#hero-section">
         <img src={logocompleto} alt="logo-brisa" className="navbar__logo" />
       </a>
       <div className="flex align-center justify-between lg:hidden">
@@ -42,10 +42,10 @@ const Navbar = () => {
             !menuShow ? "hidden" : ""
           } lg:flex flex-col lg:flex-row  mt-5 lg:mt-0 lg:px-36`}
         >
-          <NavLink link="#about">La scuola</NavLink>
-          <NavLink link="#contact">Contatti</NavLink>
-          <NavLink link="#findus">Dove Trovarci</NavLink>
-          <NavLink link="#video">Video Didattici</NavLink>
+          <NavLink link="/#about">La scuola</NavLink>
+          <NavLink link="/#contact">Contatti</NavLink>
+          <NavLink link="/#findus">Dove Trovarci</NavLink>
+          <NavLink link="/blog">Materiale gratuito</NavLink>
         </div>
       </div>
     </nav>

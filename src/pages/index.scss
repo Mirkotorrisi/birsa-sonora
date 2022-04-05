@@ -7,6 +7,10 @@ html {
 }
 main {
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .title {
@@ -15,6 +19,9 @@ main {
   font-weight: 700;
 }
 
+.blog {
+  background-color: var(--primary_blue);
+}
 @media (max-width: 576px) {
   .title {
     font-size: 5rem;

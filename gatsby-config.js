@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://brisasonora.it",
     title: "Brisa Sonora",
+    author: `@brisasonora`,
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -11,7 +12,8 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-next-seo",
-
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -20,20 +22,18 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-gtag`,
-    //   options: {
-    //     trackingIds: ["UA-215619920-1"],
-    //     gtagConfig: {
-    //       anonymize_ip: true,
-    //       cookie_expires: 0,
-    //     },
-    //     pluginConfig: {
-    //       head: false,
-    //       respectDNT: true,
-    //     },
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // Specify the URL of the WordPress source
+        url: `http://mirkotorrisi.altervista.org/graphql`,
+        protocol: `http`,
+        // Indicates if a site is hosted on WordPress.com
+        hostingWPCOM: false,
+        // Specify which URL structures to fetch
+        includedRoutes: ["**/posts", "**/tags", "**/categories"],
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
