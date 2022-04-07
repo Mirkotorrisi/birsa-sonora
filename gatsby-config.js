@@ -32,6 +32,36 @@ module.exports = {
         hostingWPCOM: false,
         // Specify which URL structures to fetch
         includedRoutes: ["**/posts", "**/tags", "**/categories"],
+        options: {
+          // I have created a dummy site for us to use with the plugins we discussed
+          baseUrl: "mirkotorrisi.altervista.org",
+          protocol: "https",
+          hostingWPCOM: false,
+          // We will be using some advanced custom fields
+          useACF: true,
+          acfOptionPageIds: [],
+          verboseOutput: false,
+          perPage: 100,
+          searchAndReplaceContentUrls: {
+            sourceUrl: "https://www.mirkotorrisi.altervista.org",
+            replacementUrl: "https://localhost:8000",
+          },
+          // Set how many simultaneous requests are sent at once.
+          concurrentRequests: 10,
+          includedRoutes: [
+            "**/categories",
+            "**/posts",
+            "**/pages",
+            "**/media",
+            "**/tags",
+            "**/taxonomies",
+            "**/users",
+          ],
+          excludedRoutes: [],
+          normalizer: function ({ entities }) {
+            return entities;
+          },
+        },
       },
     },
     {

@@ -1,14 +1,16 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { GatsbySeo } from "gatsby-plugin-next-seo";
-import Article from "../commons/article/article";
+import Img from "gatsby-image";
 import Navbar from "../commons/Navbar";
 import Footer from "../commons/Footer";
 import { Helmet } from "react-helmet";
 import logo from "../images/logo_brisa.webp";
 import { NavProvider } from "../context/NavContext";
+import "../commons/article/article.scss";
 
 export default ({ data }) => {
+  console.log(data.allWpPost.edges);
   return (
     <main>
       <div id="fb-root"></div>
@@ -69,13 +71,40 @@ export default ({ data }) => {
           <h1 className="hero-section__title mt-36">
             Contenuti didattici di BrisaSonora
           </h1>
-          {data.allWpPost.edges.map(({ node }) => {
-            console.log(
-              "🚀 ~ file: blog.js ~ line 69 ~ {data.allWpPost.edges.map ~ node",
-              node
-            );
-            return <Article node={node} />;
-          })}
+          <ul
+            style={{ listStyle: "none" }}
+            className="article_container lg:w-1/2 p-5 mt-24"
+          >
+            {data.allWpPost.edges.map((post) => (
+              <li
+                style={{ padding: "20px 0", borderBottom: "1px solid #eeeeee" }}
+              >
+                <Link
+                  to={`/post/${post.node.slug}`}
+                  style={{
+                    display: "flex",
+                    color: "black",
+                    textDecoration: "none",
+                  }}
+                >
+                  <Img
+                    fixed={post.node.featuredImage?.node?.uri}
+                    alt={post.node.title}
+                  />
+                  <div>
+                    <h2 className="middle-section__picture__title mb-1 mt-20 lg:mt-0">
+                      {post.node.title}
+                    </h2>
+                    <h3 className="article__date mb-5">{post.node.date}</h3>
+
+                    <div
+                      dangerouslySetInnerHTML={{ __html: post.node.excerpt }}
+                    />
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </section>
         <Footer />
       </NavProvider>
@@ -84,27 +113,30 @@ export default ({ data }) => {
 };
 export const pageQuery = graphql`
   query {
-    allWpPost(sort: { fields: [date], order: DESC }) {
+    allWpPost(sort: { order: DESC, fields: date }) {
       edges {
         node {
-          title
-          comments {
-            nodes {
-              content
-              author {
-                node {
-                  name
-                }
-              }
-            }
-          }
-          content
-          dateGmt
+          slug
+          id
           featuredImage {
             node {
               uri
             }
           }
+          date(formatString: "DD/MM/YYYY")
+          title
+          content
+          comments {
+            nodes {
+              author {
+                node {
+                  name
+                }
+              }
+              content
+            }
+          }
+          excerpt
         }
       }
     }

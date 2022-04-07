@@ -1,15 +1,25 @@
 import React from "react";
 import Img from "gatsby-image";
 import "./article.scss";
-const Article = ({ node }) => {
-  const dateSplitted = node.dateGmt.split("T")[0].split("-");
+import { graphql, Link } from "gatsby";
 
+const Article = ({ node }) => {
   return (
-    <article className={"article_container lg:w-1/2 p-5"}>
+    <article className={"article_container lg:w-1/2 p-5 mt-24"}>
+      <Link
+        to={`/blog`}
+        style={{
+          display: "flex",
+          color: "black",
+          textDecoration: "none",
+        }}
+      >
+        <h3>Indietro</h3>
+      </Link>{" "}
       <h2 className="middle-section__picture__title mb-1 mt-20 lg:mt-0">
         {node.title}
       </h2>
-      <h3 className="article__date mb-5">{`${dateSplitted[2]}/${dateSplitted[1]}/${dateSplitted[0]}`}</h3>
+      <h3 className="article__date mb-5">{node.date}</h3>
       <p dangerouslySetInnerHTML={{ __html: node.content }} />
       <Img
         fixed={node.featuredImage?.node?.uri}
