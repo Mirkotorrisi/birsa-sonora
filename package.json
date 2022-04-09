@@ -2,7 +2,7 @@
   "name": "brisa-sonora",
   "version": "1.0.0",
   "private": true,
-  "description": "Brisa Sonora",
+  "description": "Brisasonora corsi di musica, lezioni di pianoforte e violino online o in sede. Aci Sant'Antonio Catania.",
   "author": "mirkotorrisi",
   "keywords": [
     "gatsby",
@@ -19,24 +19,23 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "axios": "^0.24.0",
-    "gatsby": "^3.14.2",
+    "gatsby": "^4.11.2",
     "gatsby-image": "^3.11.0",
-    "gatsby-plugin-disqus": "^1.2.3",
     "gatsby-plugin-google-gtag": "^4.4.0",
-    "gatsby-plugin-image": "^1.14.1",
-    "gatsby-plugin-manifest": "^3.14.0",
+    "gatsby-plugin-image": "^2.11.1",
+    "gatsby-plugin-manifest": "*",
     "gatsby-plugin-next-seo": "^1.9.0",
+    "gatsby-plugin-postcss": "^5.11.0",
     "gatsby-plugin-react-helmet": "^4.14.0",
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-robots-txt": "^1.6.14",
-    "gatsby-plugin-sass": "^4.14.0",
-    "gatsby-plugin-sharp": "^3.14.3",
+    "gatsby-plugin-sass": "^5.11.1",
+    "gatsby-plugin-sharp": "^4.11.1",
     "gatsby-plugin-sitemap": "^4.10.0",
-    "gatsby-source-filesystem": "^3.14.0",
+    "gatsby-source-filesystem": "^4.11.1",
     "gatsby-source-wordpress": "^6.9.0",
     "gatsby-transformer-remark": "^4.11.0",
-    "gatsby-transformer-sharp": "^3.14.0",
+    "gatsby-transformer-sharp": "^4.11.0",
     "gsap": "^3.8.0",
     "path": "^0.12.7",
     "react": "^17.0.1",
@@ -44,12 +43,7 @@
     "react-helmet": "^6.1.0",
     "react-helmet-async": "^1.2.2",
     "sass": "^1.42.1",
-    "scrolltrigger": "^1.0.1"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.3.7",
-    "gatsby-plugin-postcss": "^4.14.0",
-    "postcss": "^8.3.9",
-    "tailwindcss": "^2.2.17"
+    "scrolltrigger": "^1.0.1",
+    "tailwindcss": "^3.0.23"
   }
 }
