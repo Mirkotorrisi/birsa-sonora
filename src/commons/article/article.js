@@ -20,7 +20,7 @@ const Article = ({ node }) => {
         {node.title}
       </h2>
       <h3 className="article__date mb-5">{node.date}</h3>
-      <p dangerouslySetInnerHTML={{ __html: node.content }} />
+      <div dangerouslySetInnerHTML={{ __html: node.content }} />
       <Img
         fixed={node.featuredImage?.node?.uri}
         key={node.featuredImage?.node?.uri}
