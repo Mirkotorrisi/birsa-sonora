@@ -26,9 +26,9 @@ const BlogPostTemplate = ({ data }) => (
     <GatsbySeo
       title={data.wpPost.title}
       description={data.wpPost.excerpt}
-      canonical="https://brisasonora.it/"
+      canonical={`https://brisasonora.it/blog/${data.wpPost.title}`}
       openGraph={{
-        url: "https://brisasonora.it",
+        url: `https://brisasonora.it/blog/${data.wpPost.title}`,
         title: data.wpPost.title,
         description: data.wpPost.excerpt,
         images: [
